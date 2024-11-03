@@ -1,0 +1,82 @@
+body {
+    background-color: #000000;
+    color:aliceblue;
+    font-family: Consolas, Courier, monospace;
+}
+
+
+header {
+    background-color: #000000;
+    font-family: Consolas,Courier,monospace;
+    padding: 10px;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 18px;
+    color: rgb(61, 183, 31);
+    border-color: rgb(61, 183, 31) ;
+    border-style: solid;
+    margin: 10 px
+}
+
+/* keyframes */
+@keyframes blink {
+    5%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .6;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+#welcome1 {
+    font-size: 15 px;
+    text-align: left;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 30;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/*#welcome {
+    text-align: left;
+    font-size: 15 px;
+    margin: 30px;
+}*/
+
+#blinking_main{
+    text-align: left;
+    font-size: 15 px;
+    margin: 30px;
+    animation: blink 1.5s linear infinite;
+}
